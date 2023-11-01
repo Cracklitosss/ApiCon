@@ -1,0 +1,179 @@
+### Crear vehiculo
+POST http://localhost:3000/vehiculos/crear
+Content-Type: application/json
+
+{
+  "modelo": "BXXZ019",
+  "año": "2010",
+  "color": "Naranja",
+  "precio": "99900",
+  "nuevo": false
+}
+
+### Obtener Vehiculos
+GET http://localhost:3000/vehiculos/obtener
+
+### Obtener Vehiculos por ID
+GET http://localhost:3000/vehiculos/obtener/65414437ff6b4d7f221cb740
+
+### Actualizar un vehículo
+PUT http://localhost:3000/vehiculos/actualizar/65428cb67e6a7680dba420d9
+Content-Type: application/json
+
+{
+  "modelo": "5000XVA",
+  "año": "1999",
+  "color": "Azul",
+  "precio": "12000",
+  "nuevo": false
+}
+
+### Borrar un vehículo por ID
+DELETE http://localhost:3000/vehiculos/borrar/65428cb67e6a7680dba420d9
+
+//////////////////////////////////////
+
+### Crear vendedor
+POST http://localhost:3000/vendedores/crear
+Content-Type: application/json
+
+{
+  "nombre": "Reina",
+  "apellido": "Misteria",
+  "contacto": {
+    "numeroCelular": "444-684-1283"
+  }
+}
+
+### Obtener Todos los Vendedores
+GET http://localhost:3000/vendedores/obtener
+
+### Obtener vendedor ID con detalles
+GET http://localhost:3000/vendedores/obtener/65414442ff6b4d7f221cb742
+
+### Actualizar un Vendedor por ID
+PUT http://localhost:3000/vendedores/actualizar/65414442ff6b4d7f221cb742
+Content-Type: application/json
+
+{
+  "nombre": "Joakin",
+  "apellido": "Jirafales",
+  "contacto": {
+    "numeroCelular": "987-654-3210"
+  }
+}
+
+### Borrar un Vendedor por ID
+DELETE http://localhost:3000/vendedores/borrar/65414442ff6b4d7f221cb742
+
+//////////////////////////////////////
+
+### Crear clientes
+POST http://localhost:3000/clientes/crear
+Content-Type: application/json
+
+{
+  "nombre": "Clienteciton",
+  "apellido": "Number",
+  "dirección": "Direccionciton",
+  "contacto": {
+    "numeroCelular": "123-456-7890"
+  }
+}
+
+### Obtener Todos los Clientes
+GET http://localhost:3000/clientes/obtener
+
+### Obtener cliente por ID con detalles
+GET http://localhost:3000/clientes/obtener/65428d3d7e6a7680dba420f5
+
+### Actualizar un Cliente por ID
+PUT http://localhost:3000/clientes/actualizar/65428d3d7e6a7680dba420f5
+Content-Type: application/json
+
+{
+  "nombre": "Clientuki",
+  "apellido": "Apelliduki",
+  "dirección": "Direccionzuki",
+  "contacto": {
+    "numeroCelular": "987-654-3210"
+  }
+}
+
+### Borrar Cliente por ID
+DELETE http://localhost:3000/clientes/borrar/65428d3d7e6a7680dba420f5
+
+//////////////////////////////////////
+
+### Crear venta
+POST http://localhost:3000/ventas/crear
+Content-Type: application/json
+
+{
+  "fechaDeVenta": "2023-10-20",
+  "vehiculoVendido": "65414437ff6b4d7f221cb740",
+  "cliente": "65414448ff6b4d7f221cb744",
+  "vendedor": "65414442ff6b4d7f221cb742",
+  "pago": {
+    "monto": 1111100,
+    "metodo": "Efectivo",
+    "fecha": "2023-10-20"
+  }
+}
+
+### Obtener ventas
+GET http://localhost:3000/ventas/obtener
+
+### Obtener venta por ID
+GET http://localhost:3000/ventas/obtener/65428d627e6a7680dba420fe
+
+### Actualizar una Venta por ID
+PUT http://localhost:3000/ventas/actualizar/65428d627e6a7680dba420fe
+Content-Type: application/json
+
+{
+  "fechaDeVenta": "2019-07-12",
+  "vehiculoVendido": "65407f29ac611c8fd36032ab",
+  "cliente": "65407f3dac611c8fd36032af",
+  "vendedor": "65407f31ac611c8fd36032ad",
+  "pago": {
+    "monto": 11111,
+    "metodo": "Efectivo",
+    "fecha": "2019-07-12"
+  }
+}
+
+### Borrar venta
+DELETE http://localhost:3000/ventas/borrar/65428d627e6a7680dba420fe
+
+//////////////////////////////////////
+
+### Crear devoluciones 
+POST http://localhost:3000/devoluciones/crear
+Content-Type: application/json
+
+{
+  "razon": "Producto defectuoso",
+  "fecha": "2023-10-30",
+  "ventaRelacionada": "6541449cff6b4d7f221cb746"
+}
+
+### Obtener devolucion
+GET http://localhost:3000/devoluciones/obtener
+
+### Obtener devolucion por ID con detalles
+GET http://localhost:3000/devoluciones/obtener/65428db07e6a7680dba42108
+
+### Actualizar devolucion
+PUT http://localhost:3000/devoluciones/actualizar/65428db07e6a7680dba42108
+Content-Type: application/json
+
+{
+  "razon": "Producto incompleto",
+  "fecha": "2023-10-31"
+}
+
+### Borrar devolucion
+DELETE http://localhost:3000/devoluciones/borrar/65428db07e6a7680dba42108
+
+
